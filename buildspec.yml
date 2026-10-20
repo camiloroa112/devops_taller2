@@ -1,9 +1,18 @@
+
 version: 0.2
 
 phases:
   pre_build:
     commands:
+      - echo "Iniciando la fase PRE_BUILD del taller DevOps"
       - pip install -r requirements.txt
-artifacts:
-  files:
-    - '**/*'
+      - echo "Dependencias instaladas correctamente"
+
+  build:
+    commands:
+      - echo "Iniciando la fase BUILD"
+      - echo "Preparando la aplicacion Python"
+
+  post_build:
+    commands:
+      - echo "Compilacion finalizada correctamente"
